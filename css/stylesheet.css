@@ -1,0 +1,938 @@
+:root{
+	--mainBackground:#1a171d;
+	--mainBackgroundLight:#2f2d2a;
+	--mainBackgroundDark:#171518;
+	--bodyBackgroundDark:#292626;
+	--font:#fff;
+	--secondaryColor:#EB5E28;
+
+}
+
+/* ESTILOS DEL INDEX HTML */
+
+html{
+	font-family: 'Open Sans', sans-serif;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+body{
+	margin: 0;
+	height:100%;
+	width:100%;
+	padding:0;
+	background-color:var(--mainBackground);
+	transition:.3s ease all;
+}
+body.light{
+	background: #f0f0f0;
+	box-shadow:  7px 7px 12px #e6e6e6,
+}
+body::-webkit-scrollbar{
+	width: 0.25rem;
+}
+body::-webkit-scrollbar-track{
+	background-color:var(--mainBackground);
+}
+body::-webkit-scrollbar-thumb{
+	background-color:var(--secondaryColor)
+}
+/* NAVBAR */
+.nav-mobile{
+	display:none;
+}
+.navbar{
+	position:fixed;
+	background-color: var(--mainBackground);
+	transition: width 200ms ease;
+	padding:0;
+	
+}
+.navbar.light{
+		background: linear-gradient(145deg, #ffffff, #d8d8d8);
+		box-shadow:none;
+}
+.navbar-nav.light{
+	background: linear-gradient(145deg, #ffffff, #d8d8d8);
+	box-shadow:none;
+}
+.nav-mobile.light{
+	background: linear-gradient(145deg, #ffffff, #d8d8d8);
+}
+.nav-ul.light{
+	background: linear-gradient(145deg, #ffffff, #d8d8d8);
+}
+       /* flex Container */
+
+.navbar-nav{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	z-index: 1000;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	height:100%;
+	background: linear-gradient(145deg, #1c191f, #17151a);
+	box-shadow:  6px 6px 12px #161318,
+				 -6px -6px 12px #1e1b22;
+}
+
+    /* nav items */
+
+.nav-item{
+	width: 100%;
+}
+.nav-item:last-child{
+	margin-top: auto;
+}
+	/* nav logo */
+.logo{
+	font-weight: bold;
+	text-transform:uppercase;
+	margin-bottom:1rem;
+	text-align: center;
+	color: var(--secondaryColor);
+	background-color:var(--mainBackgroundDark);
+	font-size:1.5rem;
+	text-transform: uppercase;
+	letter-spacing: 0.3ch;
+	width: 100%;
+}
+.logo.light{
+	background: linear-gradient(145deg, #ffffff, #d8d8d8);
+}
+.logo .nav-link:hover{
+	border-radius: 25px;
+	/* width: 100%; */
+	/* margin: 0; */
+	
+}
+
+.logo-text{
+	margin-right:10px;
+}
+.logo-icon{
+	transform: rotate(0deg);
+	transition: transform 600ms;
+	max-width:1.5rem;
+	margin-left: 25px;
+}
+.navbar:hover .logo-icon{
+	transform: rotate(-180deg);
+}
+	/*nav links & text*/
+
+.nav-link{
+	display:flex;
+	align-items:center;
+	height: 5rem;
+	color:var(--secondaryColor);
+	text-decoration:none;
+	filter: grayscale(100%) opacity(0.7);
+	transition:all 600ms;
+	margin:0 10px;
+}
+.nav-link:hover{
+	filter: grayscale(0%) opacity(1);
+	background-color:var(--mainBackgroundDark);
+	color: var(--secondaryColor);
+	border-radius: 100px;
+}
+.nav-link.light:hover{
+	background-color:rgb(255, 255, 255);
+}
+.link-text{
+	display:none;
+	margin-left:1rem;
+}
+
+
+    /* icons */
+
+.icon{
+	min-width: 2rem;
+	margin: 0 1.5rem;
+}
+/* TITULO PRINCIPAL */
+.grid-container{
+	display:grid;
+	position:absolute;
+	grid-template-areas: 'main info';
+	grid-template-columns: 70% 30%;
+	z-index: -1000;
+	width: 100vw;
+}
+
+main{
+	grid-area:main;
+	margin: 20px;
+	max-width:85%;
+	margin-left: 10rem; /*estaba en 5 antes*/
+	border-radius: 15px;
+	padding: 10px;
+	z-index: -10;
+	/* background-color:var(--mainBackground); */
+	background: linear-gradient(145deg, #1c191f, #17151a);
+	box-shadow:  6px 6px 12px #161318,
+				 -6px -6px 12px #1e1b22;
+}
+.app.light{
+	background: linear-gradient(145deg, #ffffff, #d9dadd);
+	box-shadow:  5px 5px 10px #cdced1,
+				 -5px -5px 10px #ffffff;
+}
+
+.app .week-day{
+	margin-left:35px;
+}
+.cardsContainer-parent{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
+	z-index:10;
+	
+}
+.h1container{
+	margin:0;
+	padding:0;
+	padding-bottom:10px;
+}
+.cardsContainer-parent .card{
+	font-family: 'Rubik', sans-serif;
+	margin-bottom:20px;
+	border-radius: 5px;
+	background: linear-gradient(315deg, #1c191f, #17151a);
+	box-shadow:  -5px -5px 0px #18151b,
+				 5px 5px 0px #1c191f;
+}
+.materiasH1{
+	margin: 0;
+}
+.materiasH1.light{
+	background-color:#fff;
+}
+.h1container{
+	padding-top:20px;
+	margin-left: 5.5rem;
+}
+.h1container h1{
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+	color: var(--secondaryColor);
+	margin: 15px;
+	margin-top: 0;
+	margin-left: 100px;
+	font-weight: 700;
+	font-size: 3em;
+	border-radius: 5px;
+	font-family: 'Rubik', sans-serif;
+	background: #EB5E28;
+	background: linear-gradient(to right, #EB5E28 0%, #FFC917 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+main h1.light{
+	background-color:#fff;
+}
+/* SECCION PRINCIPAL */
+.main{
+	display: flex;
+	justify-content: center;
+	align-content: flex-start;
+	flex-direction:column;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, #eb5e28 0%, #ffba00 100%);
+	color: var(--font);
+	padding: 15px;
+	margin: 0 15px;
+	z-index: -5;
+	margin-bottom: 15px;
+	width: auto;
+	border-radius: 5px;
+	box-shadow: -1px 2px 5px 0px rgba(196,81,36,0.75);
+	-webkit-box-shadow: -1px 2px 5px 0px rgba(196,81,36,0.75);
+	-moz-box-shadow: -1px 2px 5px 0px rgba(196,81,36,0.75);
+}
+.accordion-flush .main{
+	padding:3px;
+}
+.acordionTitulo{
+	font-family: 'Rubik', sans-serif;
+	border-radius: 5px;
+	background-color: var(--mainBackground);
+	color: #eb5e28;
+	box-shadow:0;
+}
+.acordionTitulo.light{
+	background: #f0f0f0;
+	box-shadow:  7px 7px 12px #e6e6e6,
+}
+
+.acordionTitulo.light:focus,.acordionTitulo.light:active{
+	background: #f0f0f0;
+	border: none;
+	outline: none !important;
+	
+}
+.accordion-button.light:not(.collapsed){
+	color: #eb5e28;
+	outline: none !important;
+	background: #f0f0f0;
+	
+}
+
+.acordionTitulo::after{
+	outline: none !important;
+	box-shadow: none;
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffba00'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+}
+.accordion-button:not(.collapsed)::after{
+	outline: none !important;
+	box-shadow: none;
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffba00'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+}
+.acordionTitulo:focus,.acordionTitulo:active{
+	background-color:var(--mainBackground);
+	border: none;
+	outline: none !important;
+	box-shadow: none;
+}
+.accordion-button:not(.collapsed){
+	color: #eb5e28;
+	background-color:var(--mainBackground);
+	outline: none !important;
+	box-shadow: none;
+}
+.accordion-body span{
+	color: #fff;
+	font-weight: 200;
+}
+
+.main a{
+	text-decoration: none;
+	padding-left: 10px;
+	color: #fff;
+}
+/*contenedor de informacion de la derecha*/
+.info-container{
+	grid-area: info;
+	background-color: red;
+	margin:20px;
+	width: 90%;
+	padding: 25px;
+	background: linear-gradient(145deg, #1c191f, #17151a);
+	box-shadow:  6px 6px 12px #161318,
+				 -6px -6px 12px #1e1b22;
+	border-radius: 15px;
+}
+.info-container.light{
+	background: linear-gradient(145deg, #fafafb, #d3d3d4);
+	box-shadow:  5px 5px 10px #c7c7c8,
+				 -5px -5px 10px #ffffff;
+	color: #1B2743;
+}
+.info-container.light h4{
+	color: #1B2743;
+}
+.info-container.light span{
+	color: #1B2743;
+}
+.todays-subject.light{
+	color: #1B2743;
+}
+.todays-subject.light span {
+	color: #1b2743;
+}
+.week-day{
+	font-size: 2em;
+	font-family: 'Rubik', sans-serif;
+	background: #EB5E28;
+	background: linear-gradient(to right, #EB5E28 0%, #FFC917 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.todays-subject{
+	color: #fff;
+	font-weight: 300;
+}
+.app .todays-subject{
+	margin-left:35px;
+}
+.todays-subject span{
+	font-weight: 100;
+	font-size: .9em;
+}
+.info-container h4{
+	color:#fff;
+}
+.info-container span{
+	color: #fff;
+}
+.previewUser{
+	margin-bottom:5px;
+	font-weight: bold;
+}
+.previewUser .todays-subject{
+	padding: 0;
+	margin: 0;
+}
+/* GRUPO DE BOTONES QUE SE VEN EN LA PAGINA PRINCIPAL */
+.buttonGroup{
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	margin: 15px;
+}
+/* BOTON 'AÑADIR ALUMNO' y BOTON 'ELIMINAR REGISTRO'*/
+.buttonGroup-Add,.Eliminar-Button,.deleteStudent{
+	color: var(--secondaryColor);
+	outline:none;
+	background-color:var(--mainBackground);
+	border:0;
+	font-family: 'Rubik', sans-serif;
+	font-size:1.5em;
+	font-weight: 600;
+	border-radius: 5px;
+	cursor: pointer;
+	border-radius: 40px;
+	background: linear-gradient(145deg, #1c191f, #17151a);
+	box-shadow:  9px 9px 18px #151317,
+				 -9px -9px 18px #1f1b23;
+	transition:transform .2s ease-in-out
+}
+.buttonGroup-Add img,.Eliminar-Button img,.deleteStudent img{
+	border-radius: 5px;
+}
+.buttonGroup-Add.light,.Eliminar-Button.light{
+	background: linear-gradient(145deg, #ffffff, #d9dadd);
+	box-shadow:none;
+}
+
+.buttonGroup-Add:hover,.Eliminar-Button:hover,.deleteStudent{
+ 	transform:scale(.98);
+}
+/*Delete Student button*/
+.deleteStudent{
+	text-align: left;
+	background-color:#a14019;
+	align-self: flex-start;
+	transition:opacity 200ms ease-in;
+}
+.deleteStudent:hover{
+	opacity: .6;
+}
+/*clase que se le agrega a las cards cuando el boton eliminar registro es presionado*/
+.selectedCard{
+	box-shadow: -1px -1px 5px 3px rgba(235,94,40,0.7);
+	-webkit-box-shadow: -1px -1px 5px 3px rgba(235,94,40,0.7);
+	-moz-box-shadow: -1px -1px 5px 3px rgba(235,94,40,0.7);
+	opacity:.8;
+}
+	
+/* LINK PARA IR A LA SECCION DE 'REGISTRO DE ALUMNOS' */
+.registroLink{
+	color: var(--secondaryColor);
+	text-decoration: none;
+}
+.registroLink:hover{
+	text-decoration: underline;
+}
+/*CARDS CONTAINER (ALUMNOS,PROFESORES,MATERIAS,ETC)*/
+.cardsContainer{
+	display:flex;
+	flex-direction: row;
+	z-index:10;
+	transition: transform .2s ease-in-out;
+}
+.cardsContainer:hover{
+	transform: scale(.99);
+}
+.cardsContainer .card{
+	max-width: 300px;
+}
+/* MODAL */
+    /* TITULO */
+	.tituloModal{
+		display: flex;
+		align-items: center;
+		justify-content:center;
+		font-size:40px;
+		font-size: 2em;
+		font-family: 'Rubik', sans-serif;
+		background: #EB5E28;
+		background: linear-gradient(to right, #EB5E28 0%, #FFC917 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-transform: uppercase;
+		font-weight: 500;
+		margin: 40px 0;
+	}
+	/* CONTENEDOR */
+.modalContainer{
+	display:flex;
+	position:fixed;
+	z-index: 100;
+	justify-content: center;
+	align-items: center;
+	width:100%;
+	height:100%;
+	margin-top:0;
+	background-color: rgba(0, 0, 0, 0.685);
+}
+  /* MODAL */
+.modal{
+	display:flex;
+	flex-direction: column;
+	background-color:var(--mainBackground);
+	color: var(--font);
+	width:auto;
+	height: auto;
+	overflow: hidden;
+	justify-content:center;
+	margin:10px auto;
+	align-items:center;
+	align-content: center;
+	border-radius: 5px;
+	padding: 15px;
+	padding-bottom:20px;
+	z-index: 1;
+	position:relative;
+	
+
+}
+
+.delete-files .modal{
+	display:flex;
+	justify-content:flex-start;
+	height: auto;
+	background: linear-gradient(145deg, #1c191f, #17151a);
+	transition:display .2s ease-in-out;
+	animation:fadein .3s;
+}
+
+.delete-files .modal.light{
+	background: rgb(235, 235, 235);;
+}
+.delete-files .previewUser.light{
+	color: #1B2743;
+}
+
+@keyframes fadein {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+.delete-files h1{
+	margin-top:0;
+}
+.delete-files .main{
+	background: transparent;
+	box-shadow:none;
+	border-left:2px solid;
+	border-radius:0;
+    border-color:#FFC917;
+	text-transform: uppercase;
+	z-index: 0;
+}
+.delete-files-filesContainer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: center;
+	margin-bottom: 30px;
+}
+.modal.light{
+	background-color:rgb(235, 235, 235);
+	color:#2f2d2a;
+}
+.modal.light .datosAlumno{
+	background-color:rgb(255, 255, 255);
+	box-shadow: 0 0 5pt 2pt #D3D3D3;
+	color: #0d0c0c;
+}
+/* FORM DEL MODAL */
+.modal form{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-content:flex-start;
+	padding:10px;
+	max-width: 100%;
+	height:auto;
+	max-height: 90vh;
+	font-size: .8em;
+	overflow: hidden;
+}
+/* CONJUNTO DE DATOS PERSONALES (NOMBRE,APELLIDO,EDAD) */
+.datos{
+	display: flex;
+	justify-content:center;
+	margin: auto auto;
+}
+
+.datosAlumno{
+	outline: none;
+	margin: 20px 30px;
+	color: #fff;
+	border:none;
+	padding:8px;
+	min-width: 150px;
+	border-radius: 5px;
+	background: #1a171d;
+	box-shadow: inset 10px 10px 18px #161318,
+            inset -10px -10px 18px #1e1b22;
+}
+.datosAlumno::placeholder{
+	color: rgb(139, 139, 139);
+}
+.modal.light .datosAlumno::placeholder{
+	color:rgb(124, 124, 124);
+}
+/* GRUPO DE MATERIAS */
+.grupoDeMaterias{
+	display:flex;
+	justify-content:center;
+	/* padding:10px; */
+	margin: 20px;
+
+}
+/* LABEL DE  MATERIAS */
+.materia{
+	
+	margin:0 20px;
+	padding: 8px;
+	background: transparent;
+	box-shadow:none;
+	border-left:2px solid;
+	border-radius:0;
+    border-color:#FFC917;
+	text-transform: uppercase;
+	z-index: 0;
+	padding-left: 15px;
+
+	
+}
+/* INPUT DE MATERIAS */
+#matematica,#quimica,#fisica,#historia,#geografia,#biologia{
+	margin: 20px 0;
+	color: #fff;
+	border:none;
+	padding:8px;
+	min-width: 150px;
+	border-radius: 5px;
+	background: #1a171d;
+	box-shadow: inset 10px 10px 18px #161318,
+            inset -10px -10px 18px #1e1b22;
+}
+#matematica,#quimica,#fisica,#historia,#geografia,#biologia::placeholder{
+	color:rgb(144, 144, 144);
+}
+.modal.light #matematica.light,#quimica.light,#fisica.light,#historia.light,#geografia.light,#biologia.light{
+	background-color:rgb(255, 255, 255);
+	box-shadow: 0 0 5pt 2pt #D3D3D3;
+	color: #0d0c0c;
+}
+.modal.light #matematica.light,#quimica.light,#fisica.light,#historia.light,#geografia.light,#biologia.light::placeholder{
+	color: rgb(0, 0, 0);
+}
+/* GRUPOS DE MATERIAS (SE DIVIDEN EN 3 PAREJAS DE 2 MATERIAS) */
+.materiasGrupo1,.materiasGrupo2,.materiasGrupo3{
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+}
+/* BOTON PARA GUARDAR CAMBIOS Y AGREGAR ALUMNO AL REGISTRO */
+.modalBtnGroup{
+	display: flex;
+	justify-content:center;
+	align-content: center;
+	align-items: center;
+	
+}
+.saveBtn{
+	border:none;
+	padding:10px 0;
+	border-radius: 5px;
+	outline:2px solid var(--secondaryColor);
+	outline-offset: 5px;
+	color: #fff;
+	background-color: var(--secondaryColor);
+	cursor: pointer;
+	font-weight: bold;
+	width: 25%;
+	margin: auto;
+	
+}
+.saveBtn:hover{
+	opacity: .7;
+}
+/* BOTON PARA CANCELAR CAMBIOS */
+.quitBtn{
+	border:none;
+	padding:9px 0;
+	border-radius: 5px;
+	outline:2px solid var(--secondaryColor);
+	outline-offset: 5px;
+	color: var(--secondaryColor);
+	background-color:transparent;
+	cursor: pointer;
+	font-weight: bold;
+	width: 25%;
+	margin: auto;
+}
+.quitBtn:hover{
+	background-color:var(--secondaryColor);
+	color: var(--font);
+
+}
+.mobile1,.mobile2{
+	display:none;
+}
+.grupoDeMaterias2{
+	display: none;
+}
+/* SMALL SCREENS */
+@media screen and (max-width:768px) {
+	.h1container{
+		margin: 0 !important;
+		padding: 0;
+		margin: 20px;
+		max-width: 100vw;
+	}
+	.h1container h1{
+		max-width: 100vw;
+		margin: 10px;
+
+	}
+	.navbar{
+		display:none !important;
+	}
+	.navbar.light{
+		display: none !important;
+	}
+	.navbar-nav{
+		display: none !important;
+	}
+	.nav-mobile{
+		display:flex;
+		flex-direction: row;
+		margin:0;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+	}
+	.nav-mobile ul{
+		list-style-type:none;
+		padding: 0;
+		display:flex;
+		width: 100vw;
+		margin: 0;
+		background-color:var(--mainBackground);
+	}
+	.nav-mobile .nav-link{
+		display: flex;
+		justify-content:center;
+		margin: 0;
+	}
+	.nav-mobile i{
+		margin: 0;
+		padding-left: 8px;
+	}
+	.grid-container{
+		grid-template-areas: 'info'
+		                      'main';
+		grid-template-columns: 100%;
+		margin:0;
+		width: 100vw;
+	}
+	.info-container{
+		width: 100vw;
+		margin: 0;
+		padding: 20px;
+		max-width: 100vw;
+		font-size:.9em;
+	}
+	.app{
+		margin:25px 0;
+		margin-bottom: 100px;
+		min-width: 100%;
+	}
+	.cardsContainer-parent{
+		align-items:stretch;
+	}
+	.cardsContainer{
+		max-width:150px;
+		align-items: flex-start !important;
+		justify-content:center;
+		align-content: flex-start;
+		margin: 10px 5px;
+		
+	}
+	.card-body {
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+		justify-content:center;
+	}
+	.buttonGroup{
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	.buttonGroup-Add{
+		margin-bottom: 20px;
+	}
+	.modal{
+		margin:0;
+		overflow-y:hidden;
+		padding-bottom:0;
+		width: 100%;
+		height: 100%;
+		justify-content: space-between;
+		max-height:initial;
+	}
+	.modal form{
+		justify-content: space-between;
+	}
+	.datos{
+		flex-direction:column;
+		margin: 5%;
+	}
+	.datos input{
+		margin: 0;
+	}
+	.tituloModal{
+		margin: 0;
+	}
+	.grupoDeMaterias{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: stretch;
+		margin: 0;
+		margin-top: 20px;
+		width: 100%;
+	}
+	.materiasGrupo1,.materiasGrupo2,.materiasGrupo3{
+		flex-direction: column;
+		justify-content:space-between;
+		align-items:stretch;
+		max-width: 150px;
+	}
+	#matematica,#quimica,#fisica,#historia,#geografia,#biologia::placeholder{
+		max-width: 50px;
+	}
+	.dekstop{
+		display:none !important; /* esto hace desaparecer la label y el input de materiasgrupo3, la onda es poner display flex a mobile1 y mobile2 de funciones.js*/
+	}
+	.grupoDeMaterias2{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: stretch;
+		margin: 0;
+		margin-top: 20px;
+		width: 100%;
+	}
+	.mobile1,.mobile2{
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+		align-items: stretch;
+		align-content: stretch;	
+		max-width: 150px;
+	}
+	.mobile2{
+		justify-content: flex-start;
+		align-items: flex-end;
+		align-content: center;
+	}
+	.materiasGrupo3{
+		display: none;
+	}
+	.materia{
+		margin: 0;
+		font-size:.8em;
+		padding: 5px;
+	}
+	.modalBtnGroup{
+		padding-bottom: 20px;
+		margin-top: 10px;
+	}
+	.delete-files .modal{
+		max-height: 500px;
+		height: auto !important;
+		justify-content: space-around;
+		margin: 5%;
+	}
+	.delete-files{
+		justify-content: center;
+		align-items: center;
+	}
+	.delete-files .week-day{
+		text-align: center;
+	}
+}
+
+/* LARGE SCREENS */
+@media only screen and (min-width:768px){
+ 	.navbar{
+	 top:0;
+	 width: 5rem;
+	 height: 100vh;
+ }
+ 	.navbar:hover{
+	width: 16rem;
+}
+	.navbar:hover .link-text{
+	display:inline;
+	transition:opacity 600ms;
+}
+	#cardsContainer{
+		margin:100px;
+		max-width: 1000px;
+	}
+}
+
+/* ESTILOS DE registroAlumnos.html */
+#cardsContainer{
+	position: absolute;
+	z-index: -100;
+	margin:40px;
+	padding-bottom: 100px;
+}
+.card{
+	background-color: var(--mainBackground);
+	color: var(--font);
+	border: none;
+	z-index: 0;
+	box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.56);
+	-webkit-box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.56);
+	-moz-box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.56);
+	transition: transform 200ms ease-in;
+}
+.card.light{
+	background: linear-gradient(145deg, #ffffff, #d8d8d8);
+	box-shadow:  5px 5px 7px #ebebeb,
+				 -5px -5px 7px #f5f5f5;
+	color: #1B2743;
+}
+
+.cardsContainer:hover{
+	cursor: pointer;
+	color: var(--secondaryColor);
+}

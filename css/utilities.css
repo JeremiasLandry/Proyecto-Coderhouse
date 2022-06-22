@@ -1,0 +1,50 @@
+.btn-type1, .btn-type2{
+    border-radius: 5px;
+    outline: none;
+    margin: 5px;
+    padding: 15px;
+    border: none;
+    transition: opacity .2s ease-in-out;
+}
+.btn-type1{
+    background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(235,94,40,1) 0%, rgba(255,186,0,1) 100%);
+    color: #fff;
+}
+.btn-type2{
+    background-color: transparent;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-radius: 5px;
+    color:  rgba(255,186,0,1);
+    box-shadow: -1px 2px 5px 0px rgba(196,81,36,0.75);
+	-webkit-box-shadow: -1px 2px 5px 0px rgba(196,81,36,0.75);
+	-moz-box-shadow: -1px 2px 5px 0px rgba(196,81,36,0.75);
+    font-weight: 500;
+}
+
+.btn-type1:hover,.btn-type2:hover,.btn-type3:hover{
+    opacity:.6;
+}
+.btn-type3{
+    position: relative;
+    border: none;
+    background-color:transparent;
+    padding: 0;
+    z-index: 1000;
+    text-align: left;
+    color:rgba(255,186,0,1);
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px){
+    .btn-type1{
+        max-height: 55px;
+        padding: 10px;
+    }
+    .btn-type2{
+        max-height: 55px;
+        padding: 10px;
+    }
+}
