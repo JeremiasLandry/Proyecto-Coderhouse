@@ -565,14 +565,14 @@ main h1.light{
 .modal form{
 	display:flex;
 	flex-direction:column;
-	justify-content:center;
+	justify-content:flex-start;
 	align-content:flex-start;
 	padding:10px;
 	max-width: 100%;
 	height:auto;
 	max-height: 90vh;
 	font-size: .8em;
-	overflow: hidden;
+	overflow:auto;
 }
 /* CONJUNTO DE DATOS PERSONALES (NOMBRE,APELLIDO,EDAD) */
 .datos{
